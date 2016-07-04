@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Not all files kept in the /css and /js folder are used -->	
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/demo.css') }}" rel="stylesheet">
+
+	<!-- jQuery & jQuery UI + theme (required) -->
+	<link href="{{ url_for('static', filename='css/jquery-ui.min.css') }}" rel="stylesheet">
+	<script src="{{ url_for('static', filename='js/jquery-latest.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/jquery-ui.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+	<!-- keyboard widget css & script (required) -->
+	<link href="{{ url_for('static', filename='css/keyboard.css') }}" rel="stylesheet">
+	<script src="{{ url_for('static', filename='js/jquery.keyboard.js') }}"></script>
+
+	<!-- keyboard extensions (optional) -->
+	<script src="{{ url_for('static', filename='js/jquery.mousewheel.js') }}"></script>
+	<!--
+	<script src="../js/jquery.keyboard.extension-typing.js"></script>
+	<script src="../js/jquery.keyboard.extension-autocomplete.js"></script>
+	-->
+
+	<!-- initialize keyboard (required) -->
+	<script>
+		$(function(){
+			$('#keyboard').keyboard();
+		});
+	</script>
+
+
+
+<!--
+<style type="text/css" >
+#head_name{
+	position: relative;
+	padding-top: 20px;
+
+	text-align: center;
+	width: 100%;
+	font-family: helvetica;
+
+}
+.all{
+	position: relative;
+	text-align: center;
+	color: white;
+	font-family: helvetica;
+}
+#button_{
+	color: black;
+	border-style: solid;
+	border-radius: 3px;
+	margin-bottom: 20px;
+}
+#container_1{
+	background-color: #000033;
+	padding-bottom: 15px;
+	position: relative;
+	align-content: center;
+	height: 480px
+	width: 800px;
+	border-radius: 5px;
+	border-width: 3px;
+	border-style: solid;
+	border-color: orange;
+
+}
+/*#text_box{
+	border-radius: 5px;
+	box-shadow: none;
+	border-style: solid;
+*/
+}
+
+</style> -->
+</head>
+
+<body>
+	<div id="container_1">
+    <h1 class="all" id="head_name">OWL </h1>
+    <h2 class="all" id="head_instru">Enter MR number</h2>
+    <form class="all" action="." method="POST">
+
+	</div><!-- 
+		<input id="keyboard" type="text" class="ui-keyboard-input ui-widget-content ui-corner-all" aria-haspopup="true" role="textbox" >
+        <input id="keyboard" type="text" > <br><br> -->
+        <div id="wrap"> <!-- wrapper only needed to center the input -->
+
+		<!-- keyboard input -->
+		<input id="keyboard" type="text" name="text"><br><br>
+		<input class="all" id="button_" type="submit" name="my-form" value="Send">
+	</div> <!-- End wrapper -->
+        
+    </form>
+    </div>
+</body>
+</html>

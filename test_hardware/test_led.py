@@ -3,6 +3,8 @@ import picamera
 import pigpio
 import os
 
+camera = picamera.PiCamera()
+
 # set the pins - names are based on the colours of the wires connecting to the LEDs
 # NOTE: Both the orangeyellow and bluegreen LEDs are active LOW, hence 0 is ON and vice versa
 orangeyellow = 2
@@ -24,14 +26,12 @@ def secondaryON():
     pi.write(orangeyellow,1)
     pi.write(bluegreen,0)
 
-normalON()
-
 def take_a_pic(pr_tx):
-    camera.capture('images/' + pr_tx + '/' + str(i) + '_1.jpg', use_video_port=False)
+    camera.capture(pr_tx + '_1.jpg', use_video_port=False)
     secondaryON()
-    camera.capture('images/'+pr_tx+'/' + str(i) + '_2.jpg', use_video_port=False)
+    camera.capture(pr_tx + '_2.jpg', use_video_port=False)
     normalON()
     camera.stop_preview()
-    i=i+1
 
+normalON()
 take_a_pic('blah')
